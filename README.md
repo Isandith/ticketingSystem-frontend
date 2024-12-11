@@ -1,27 +1,109 @@
-# ConfigureFrontend
+### Frontend Setup (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+1. **Install Node.js and npm**
+   - Download from [Node.js official website](https://nodejs.org/)
+   - Verify installation:
+     ```bash
+     node -v
+     npm -v
+     ```
 
-## Development server
+2. **Install Angular CLI**
+   ```bash
+   npm install -g @angular/cli
+   ```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+3. **Setup Frontend Project**
+   ```bash
+   cd ticket-booking-system/frontend
+   npm install
+   ```
 
-## Code scaffolding
+4. **Start Frontend Server**
+   ```bash
+   ng serve
+   ```
+   Frontend will be available at `http://localhost:4200`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage Guide
 
-## Build
+### Starting the System
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Start your database server
+2. Launch backend server (Spring Boot)
+3. Start frontend application (Angular)
+4. Access the application at `http://localhost:4200`
 
-## Running unit tests
+### Using the Application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### For Administrators:
+1. Log in to the admin panel
+2. Monitor ticket availability
+3. Release new tickets when needed
+4. View transaction history
 
-## Running end-to-end tests
+#### For Customers:
+1. Browse available tickets
+2. Select desired quantity
+3. Complete purchase process
+4. View booking confirmation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Troubleshooting Guide
 
-## Further help
+### Common Issues and Solutions
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Backend Won't Start**
+   - Verify database is running
+   - Check application.properties configuration
+   - Ensure port 9090 is available
+
+2. **Frontend Connection Issues**
+   - Confirm backend is running
+   - Check CORS configuration
+   - Verify API endpoint URLs
+
+3. **Database Connection Failed**
+   - Verify database credentials
+   - Ensure database service is running
+   - Check network connectivity
+
+4. **Angular Build Errors**
+   - Clear npm cache: `npm cache clean --force`
+   - Delete node_modules: `rm -rf node_modules`
+   - Reinstall dependencies: `npm install`
+
+## API Documentation
+
+### Backend Endpoints
+
+```
+GET /api/tickets - Get available tickets
+POST /api/tickets/purchase - Purchase tickets
+GET /api/tickets/status - Get system status
+```
+
+### Sample API Requests
+
+```bash
+# Get available tickets
+curl http://localhost:9090/api/tickets
+
+# Purchase tickets
+curl -X POST http://localhost:9090/api/tickets/purchase \
+  -H "Content-Type: application/json" \
+  -d '{"quantity": 2}'
+```
+
+## Security Considerations
+
+- The system implements basic authentication
+- API endpoints are protected with JWT
+- Database passwords are encrypted
+- CORS is configured for frontend access only
+
+## Support
+
+For additional support or bug reports, please contact:
+- Email: support@ticketbooking.com
+- Issue Tracker: [GitHub Issues](github.com/ticket-booking/issues)
+
