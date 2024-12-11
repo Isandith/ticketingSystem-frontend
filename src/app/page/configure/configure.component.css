@@ -1,0 +1,330 @@
+
+
+/* Page Container */
+.page-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+    top: 200px;  /* Moves it down 100px from the top */
+    left: 28.8%;  /* Centers it horizontally */
+    transform: translateX(-50%);  /* Adjusts to exactly center horizontally */
+}
+
+
+/* Total Available Tickets Box */
+.total-tickets-box {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.total-tickets-box h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.total-tickets-box p {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Form Container */
+.form-container {
+    flex: 1;
+    padding: 40px;
+    background-color: #f0f4f8;
+}
+
+/* Form Header */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    color: #333333;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary i {
+    margin-right: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* Form Body */
+.form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 22px;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.btn-primary i {
+    margin-left: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Start and Stop Buttons */
+.btn-start, .btn-stop {
+    width: 48%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-start {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+.btn-start i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.btn-stop {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.btn-stop i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Hover Effects */
+.btn-start:hover, .btn-stop:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-start:hover {
+    background-color: #27ae60;
+}
+
+.btn-stop:hover {
+    background-color: #c0392b;
+}
+
+/* Active Effects */
+.btn-start:active, .btn-stop:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .total-tickets-box {
+        max-width: none;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-secondary {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-start, .btn-stop {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .btn-stop {
+        margin-bottom: 0;
+    }
+
+
+    
+}
+
+
+.container{
+
+    display: flex;
+    gap: 4%;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 182px;
+    position: absolute;
+    top: -0.2rem;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #353535;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}

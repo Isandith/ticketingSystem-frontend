@@ -1,0 +1,98 @@
+/* Container Styling */
+.action-buttons {
+
+    display: flex;
+    gap: 4%;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    top: 31.6rem;
+    left: 69.5%;
+    transform: translateX(-50%);
+}
+
+/* Base Button Styling */
+.btn {
+    flex: 1;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+/* Icon Styling */
+.btn i {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Start Button Specific Styling */
+.btn-start {
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.btn-start:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-start:active {
+    transform: scale(0.98);
+}
+
+.btn-start:hover i {
+    transform: translateX(5px);
+}
+
+/* Stop Button Specific Styling */
+.btn-stop {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.btn-stop:hover {
+    background: linear-gradient(135deg, #c82333, #bd2130);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-stop:active {
+    transform: scale(0.98);
+}
+
+.btn-stop:hover i {
+    transform: translateX(5px);
+}
+
+/* Focus States for Accessibility */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 150, 250, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
